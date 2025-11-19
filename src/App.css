@@ -1,7 +1,4 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -39,4 +36,66 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------App Background-------*/
+.principalContainer{
+  background-color: #E1BBEA;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  left: 0;
+}
+
+.AppTitle{
+  margin: 0;
+  font-family: 'Kavoon', cursive;
+}
+
+
+.subContainer{
+    background-color: #F0F0F0;
+    margin: 0 5vw;
+    padding: 1em;
+    border: 1px solid #000;
+    border-radius: 12px;
+    position: absolute;
+    top: 18vh;
+}
+
+.image-background{
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.image-icon{
+  width: 15%;
+  height: auto;
+  margin-top: 1em;
+}
+
+.btn-regular{
+  background-color: #C0D8C3;
+  border: 2px solid #46BBC3;
+  border-radius: 7px;
+}
+
+
+.text-bold{
+  font-weight: bold;
 }
