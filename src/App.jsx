@@ -8,6 +8,7 @@ import Encuesta from './pages/Encuesta'
 import Home from './pages/Home'
 import RegistroAlimentos from './pages/RegistroAlimentos'
 import GrupoFamiliar from './pages/GrupoFamiliar'
+import Estadisticas from './pages/Estadisticas'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -34,7 +35,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>*/}
-      <GrupoFamiliar/>
+      <Estadisticas/>
     </>
   )
 }

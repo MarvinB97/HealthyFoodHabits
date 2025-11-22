@@ -176,3 +176,20 @@ form>.mb-3 >* {
     display: flex;
     margin: 0.5rem auto;
 }
+
+
+
+
+/*
+ESTADISTICAS
+*/
+
+button.btn-left, button.btn-right {
+  border: 2px solid #000;
+}
+button.btn-left{
+  border-radius: 15px 0px 0px 15px;
+}
+button.btn-right {
+  border-radius: 0px 15px 15px 0px;
+}
