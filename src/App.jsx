@@ -4,6 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Bienvenida from './pages/Bienvenida'
 import Registro from './pages/Registro'
+import Encuesta from './pages/Encuesta'
+import Home from './pages/Home'
+import RegistroAlimentos from './pages/RegistroAlimentos'
+import GrupoFamiliar from './pages/GrupoFamiliar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,8 +33,8 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p> */}
-      <Registro/>
+      </p>*/}
+      <GrupoFamiliar/>
     </>
   )
 }

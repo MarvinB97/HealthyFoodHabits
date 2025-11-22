@@ -1,5 +1,14 @@
+body {
+  background-color: #E1BBEA;
+  width: 100vw;
+  height: 100vh;
+}
+
 #root {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1rem;
 }
 
 .logo {
@@ -49,14 +58,9 @@
 
 /*-------App Background-------*/
 .principalContainer{
-  background-color: #E1BBEA;
-  width: 100vw;
-  height: 100vh;
+  width: inherit;
+  height: inherit;
   margin: 0;
-  position: absolute;
-  z-index: -999;
-  top: 0;
-  left: 0;
 }
 
 .AppTitle{
@@ -66,16 +70,41 @@
 
 
 .subContainer{
-    background-color: #F0F0F0;
-    margin: 0 5vw;
-    padding: 1em;
-    border: 1px solid #000;
-    border-radius: 12px;
-    position: absolute;
-    top: 18vh;
+  background-color: #F0F0F0;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  border: 1px solid #000;
+  border-radius: 12px;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+}
+
+.subContainerTransparent{
+  background-color: #f0f0f000;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+}
+
+.subContainerRegistroAlimentos{
+  background-color: #FFF5F5;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  border: 1px solid #000;
+  border-radius: 2px;
+  position: absolute;
+  top: 25vh;
+  left: 0;
 }
 
 .image-background{
+  height: 50vh;
   width: 100vw;
   margin: 0;
   position: absolute;
@@ -84,9 +113,9 @@
 }
 
 .image-icon{
-  width: 15%;
-  height: auto;
-  margin-top: 1em;
+  width: auto;
+  height: 10vh;
+  margin-top: 4vh;
 }
 
 .btn-regular{
@@ -95,7 +124,55 @@
   border-radius: 7px;
 }
 
+.btn-white{
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 7px;
+}
+
 
 .text-bold{
   font-weight: bold;
+}
+
+.btn-encuesta{
+  width: 40%;
+  height: 30%;
+  margin: 10px;
+  border: 1px solid #000;
+}
+
+
+
+i.fas.fa-file-signature,i.fas.fa-plus,i.fas.fa-link {
+    font-size: 40px;
+}
+button.btn-white {
+    display: inline-grid;
+    width: 35%;
+    height: 100px;
+    margin: 0 2%;
+    justify-content: center;
+}
+
+button.btn-white-group{
+  display: inline-grid;
+  width: 35%;
+  height: auto;
+  margin: 0 2%;
+  justify-content: center;
+}
+
+
+input#formBasicDescription {
+    height: 10vh;
+}
+
+form {
+    text-align: center;
+}
+
+form>.mb-3 >* {
+    display: flex;
+    margin: 0.5rem auto;
 }
