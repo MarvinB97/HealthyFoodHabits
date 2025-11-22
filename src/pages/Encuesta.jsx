@@ -57,6 +57,12 @@ const Encuesta = ()=>{
     const [encuesta, setEncuesta] = useState(true);
     const [key, setKey] = useState(1);
 
+    const changeKey = ()=>{
+        if(key<3){
+            setKey(key + 1);
+        }
+    }
+
     return(
         <>
             <AppBackground/>
@@ -73,16 +79,16 @@ const Encuesta = ()=>{
             <div className="subContainer">
                 <p className="text-bold">{dataEncuesta[key].title}</p>
                 <p>{dataEncuesta[key].description}</p>
-                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
+                <Button className="btn-encuesta" onClick={changeKey}>
                     {dataEncuesta[key].options[0]}
                 </Button>
-                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
+                <Button className="btn-encuesta" onClick={changeKey}>
                     {dataEncuesta[key].options[1]}
                 </Button>
-                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
+                <Button className="btn-encuesta" onClick={changeKey}>
                     {dataEncuesta[key].options[2]}
                 </Button>
-                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
+                <Button className="btn-encuesta" onClick={changeKey}>
                     {dataEncuesta[key].options[3]}
                 </Button>
 
