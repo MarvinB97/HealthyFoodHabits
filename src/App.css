@@ -81,6 +81,18 @@ body {
   left: 0;
 }
 
+.subContainerBienvenida{
+  background-color: #F0F0F0;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  border: 1px solid #000;
+  border-radius: 12px;
+  position: absolute;
+  top: 15vh;
+  left: 0;  
+}
+
 .subContainerTransparent{
   background-color: #f0f0f000;
   margin: 0 9vw;

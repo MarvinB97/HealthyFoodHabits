@@ -7,8 +7,8 @@ const Bienvenida = ()=>{
     
     return(
         <>
-            <AppBackground/>
-            <div className="subContainer">
+            <AppBackground show={false}/>
+            <div className="subContainerBienvenida">
                 <p>Bienvenido a</p>
                 <Image className="image-icon" src=".\src\assets\icons\hat_chef.png"/>
                 <h2 className="AppTitle">Healthy Food Habits</h2>

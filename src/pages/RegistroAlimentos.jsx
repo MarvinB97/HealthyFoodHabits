@@ -7,7 +7,7 @@ const RegistroAlimentos = ()=>{
     let isRegister = false
     return(
         <>
-            <AppBackground/>
+            <AppBackground show={true}/>
             <Button className="btn-volver" onClick={() => navigate("/home")}>
                 {"<"} Volver
             </Button>

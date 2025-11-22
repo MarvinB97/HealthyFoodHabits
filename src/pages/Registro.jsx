@@ -6,7 +6,7 @@ const Registro = ()=>{
     const navigate = useNavigate();
     return(
         <>
-            <AppBackground/>
+            <AppBackground show={true}/>
             <div className="subContainer">
                 <p className="text-bold">¿Ya has usado la aplicación antes?</p>
                 <p>Continua con tu progreso, ingresando con tu cuenta de Google</p>

@@ -6,7 +6,7 @@ const Home = ()=>{
     const navigate = useNavigate();
     return(
         <>
-            <AppBackground/>
+            <AppBackground show={true}/>
             <Button className="btn-profile" onClick={() => navigate("/perfil")}>
                 <Image className="image-profile" src=".\src\assets\icons\logo-profile.png"/>
                 <p>Perfil</p>

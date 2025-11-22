@@ -65,7 +65,7 @@ const Encuesta = ()=>{
 
     return(
         <>
-            <AppBackground/>
+            <AppBackground show={true}/>
             {encuesta 
             ? 
             <div className="subContainer">
