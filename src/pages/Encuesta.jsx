@@ -1,5 +1,7 @@
 import { Button, Image } from "react-bootstrap";
 import AppBackground from "../components/AppBackground";
+import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 
 const dataEncuesta = [
     {
@@ -50,19 +52,20 @@ const dataEncuesta = [
     }
 ]
 
-let key = 1
-
 const Encuesta = ()=>{
-    let isEncuesta = false
+    const navigate = useNavigate();
+    const [encuesta, setEncuesta] = useState(true);
+    const [key, setKey] = useState(1);
+
     return(
         <>
             <AppBackground/>
-            {isEncuesta 
+            {encuesta 
             ? 
             <div className="subContainer">
                 <h4 className="text-bold">Queremos conocerte mejor</h4>
                 <p>Responde a estas pocas preguntas a continuación. La información que nos brindes será utilizada para adaptar las recomendaciones y el seguimiento a tus hábitos alimenticios actuales.</p>
-                <Button className="btn-regular">
+                <Button className="btn-regular" onClick={()=>setEncuesta(!encuesta)}>
                     Continuar
                 </Button>
             </div>
@@ -70,18 +73,28 @@ const Encuesta = ()=>{
             <div className="subContainer">
                 <p className="text-bold">{dataEncuesta[key].title}</p>
                 <p>{dataEncuesta[key].description}</p>
-                <Button className="btn-encuesta">
+                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
                     {dataEncuesta[key].options[0]}
                 </Button>
-                <Button className="btn-encuesta">
+                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
                     {dataEncuesta[key].options[1]}
                 </Button>
-                <Button className="btn-encuesta">
+                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
                     {dataEncuesta[key].options[2]}
                 </Button>
-                <Button className="btn-encuesta">
+                <Button className="btn-encuesta" onClick={()=>setKey(key+1)}>
                     {dataEncuesta[key].options[3]}
                 </Button>
+
+                {
+                    key==3 ?
+                    
+                    <Button className="btn-regular" onClick={() => navigate("/home")}>
+                        Continuar
+                    </Button>
+                    :
+                    <></>
+                }
             </div>
             }
         </>

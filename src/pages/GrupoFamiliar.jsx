@@ -1,10 +1,15 @@
 import { Button, Image } from "react-bootstrap";
 import AppBackground from "../components/AppBackground";
+import { useNavigate } from "react-router-dom";
 
 const GrupoFamiliar = ()=>{
+    const navigate = useNavigate();
     return(
         <>
             <AppBackground/>
+            <Button className="btn-volver" onClick={() => navigate("/home")}>
+                {"<"} Volver
+            </Button>
             <div className="subContainerTransparent">
                 <p className="text-bold">Grupo familiar</p>
                 <Button className="btn-white-group">

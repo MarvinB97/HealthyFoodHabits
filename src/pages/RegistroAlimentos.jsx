@@ -1,11 +1,16 @@
 import { Button, Form, Image } from "react-bootstrap";
 import AppBackground from "../components/AppBackground";
+import { useNavigate } from "react-router-dom";
 
 const RegistroAlimentos = ()=>{
+    const navigate = useNavigate();
     let isRegister = false
     return(
         <>
             <AppBackground/>
+            <Button className="btn-volver" onClick={() => navigate("/home")}>
+                {"<"} Volver
+            </Button>
             {isRegister 
             ? 
             <div className="subContainer">
@@ -35,7 +40,7 @@ const RegistroAlimentos = ()=>{
                         <Form.Label className="text-bold">Descripción detallada (opcional)</Form.Label>
                         <Form.Control type="text" placeholder="Descripción..." />
                     </Form.Group>
-                    <Button variant="primary" type="submit" className="btn-regular">
+                    <Button variant="primary" type="submit" className="btn-regular" onClick={() => navigate("/home")}>
                         Terminar inscripcion
                     </Button>
                 </Form>
