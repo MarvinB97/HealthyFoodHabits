@@ -237,3 +237,9 @@ button.btn-right {
 .btn-profile p {
     margin: 0;
 }
+
+
+button.btn-regular.btn.btn-primary {
+    display: block;
+    margin: 0 auto;
+}
