@@ -3,7 +3,8 @@ import AppBackground from "../components/AppBackground";
 import { useNavigate } from "react-router-dom";
 
 import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../firebase";
+import { doc, setDoc } from "firebase/firestore";
+import { auth, googleProvider, db } from "../firebase";
 
 
 const Registro = ()=>{
@@ -11,11 +12,34 @@ const Registro = ()=>{
     const navigate = useNavigate();
     
     const loginWithGoogle = async () => {
+
         try {
             const result = await signInWithPopup(auth, googleProvider);
-            console.log("Usuario logueado:", result.user);
+            const user = result.user;
+
+            console.log("Usuario autenticado:", user);
+
+            
+
+            // GUARDA O ACTUALIZA EL USUARIO
+            try {
+                await setDoc(doc(db, "users", user.uid), {
+                    uid: user.uid,
+                    name: user.displayName,
+                    email: user.email,
+                    photo: user.photoURL,
+                    lastLogin: new Date()
+                });
+
+                console.log("Usuario guardado con éxito");
+
+            } catch (err) {
+                console.error("Error Firestore:", err.code, err.message);
+            }
+
+            console.log("Usuario guardado en Firestore");
             navigate("/encuesta")
-        } catch (error) {
+        } catch (error) { 
             console.error(error);
         }
     };

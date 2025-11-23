@@ -1,10 +1,14 @@
 import { Button, Image } from "react-bootstrap";
 import AppBackground from "../components/AppBackground";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 
 import { signOut } from "firebase/auth";
+import { getUser } from "../components/getUser";
 import { auth } from "../firebase";
+
+
+import defaultPhoto from "../assets/icons/logo-profile.png";
 
 
 const Perfil = ()=>{
@@ -14,6 +18,25 @@ const Perfil = ()=>{
         signOut(auth);
         navigate("/");
     }
+ 
+    //LEER DATOS DEL USUARIO
+    const [userData, setUserData] = useState(null);
+
+    useEffect(() => {
+        const user = auth.currentUser; // usuario autenticado
+
+        if (!user) return;
+
+        const loadUser = async () => {
+        const data = await getUser(user.uid);
+        setUserData(data);
+        };
+
+        loadUser();
+    }, []);
+
+
+
 
     return(
         <>
@@ -22,8 +45,8 @@ const Perfil = ()=>{
                 {"<"} Volver
             </Button>
             <div className="subContainer">
-                <h4 className="text-bold">UserName</h4>
-                <Image className="image-icon" src=".\src\assets\icons\logo-profile.png"/>
+                <h4 className="text-bold">{userData?.name || "Nombre del Usuario"}</h4>
+                <Image className="image-icon" src={userData?.photo || defaultPhoto}/>
                 
                 <p>Mis insignias</p>
                 <hr/>
