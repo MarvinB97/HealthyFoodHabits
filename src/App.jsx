@@ -13,11 +13,15 @@ import RegistroAlimentos from './pages/RegistroAlimentos'
 import GrupoFamiliar from './pages/GrupoFamiliar'
 import Estadisticas from './pages/Estadisticas'
 import Perfil from './pages/Perfil'
+import ResultadoRegistro from './pages/ResultadoRegistro';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const queryClient = new QueryClient()
 
   return (
+    <QueryClientProvider client={queryClient}>
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Bienvenida />} />
@@ -28,8 +32,10 @@ function App() {
         <Route path='/grupo-familiar' element={<GrupoFamiliar/>}/>
         <Route path='/estadisticas' element={<Estadisticas/>}/>
         <Route path='/perfil' element={<Perfil/>}/>
+        <Route path='/resultado-registro' element={<ResultadoRegistro/>}/>
       </Routes>
     </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 
