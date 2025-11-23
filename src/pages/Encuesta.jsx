@@ -44,7 +44,6 @@ const dataEncuesta = [
         options: [
             "Intolerancia a la lactosa",
             "Alergia al gluten",
-            "Intolerancia a la lactosa",
             "Alergia a frutos secos",
             "Colesterol alto",
             "DIabetes"
