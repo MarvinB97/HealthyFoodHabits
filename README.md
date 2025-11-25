@@ -24,3 +24,5 @@ $ npm create vite@latest . -- --template react
 
 ## Instalación de dependencias
 
+$ npm i
+$ npm install @fortawesome/fontawesome-free

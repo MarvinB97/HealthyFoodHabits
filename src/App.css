@@ -1,8 +1,14 @@
+body {
+  background-color: #E1BBEA;
+  width: 100vw;
+  height: 100vh;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1rem;
 }
 
 .logo {
@@ -39,4 +45,203 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------App Background-------*/
+.principalContainer{
+  width: inherit;
+  height: inherit;
+  margin: 0;
+}
+
+.AppTitle{
+  margin: 0;
+  font-family: 'Kavoon', cursive;
+}
+
+
+.subContainer{
+  background-color: #F0F0F0;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  border: 1px solid #000;
+  border-radius: 12px;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+}
+
+.subContainerBienvenida{
+  background-color: #F0F0F0;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  border: 1px solid #000;
+  border-radius: 12px;
+  position: absolute;
+  top: 15vh;
+  left: 0;  
+}
+
+.subContainerTransparent{
+  background-color: #f0f0f000;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+}
+
+.subContainerRegistroAlimentos{
+  background-color: #FFF5F5;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  border: 1px solid #000;
+  border-radius: 2px;
+  position: absolute;
+  top: 25vh;
+  left: 0;
+}
+
+.image-background{
+  height: 50vh;
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.image-icon{
+  width: 60px;
+  height: 60px;
+  margin-top: 4vh;
+  border-radius: 50%;
+}
+
+.btn-regular{
+  background-color: #C0D8C3;
+  border: 2px solid #46BBC3;
+  border-radius: 7px;
+}
+
+.btn-white{
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 7px;
+}
+
+
+.text-bold{
+  font-weight: bold;
+}
+
+.btn-encuesta{
+  width: 40%;
+  height: 30%;
+  margin: 10px;
+  border: 1px solid #000;
+}
+
+
+
+i.fas.fa-file-signature,i.fas.fa-plus,i.fas.fa-link {
+    font-size: 40px;
+}
+button.btn-white {
+    display: inline-grid;
+    width: 35%;
+    height: 100px;
+    margin: 0 2%;
+    justify-content: center;
+}
+
+button.btn-white-group{
+  display: inline-grid;
+  width: 35%;
+  height: auto;
+  margin: 0 2%;
+  justify-content: center;
+}
+
+
+input#formBasicDescription {
+    height: 10vh;
+}
+
+form {
+    text-align: center;
+}
+
+form>.mb-3 >* {
+    display: flex;
+    margin: 0.5rem auto;
+}
+
+
+
+
+/*
+ESTADISTICAS
+*/
+
+button.btn-left, button.btn-right {
+  border: 2px solid #000;
+}
+button.btn-left{
+  border-radius: 15px 0px 0px 15px;
+}
+button.btn-right {
+  border-radius: 0px 15px 15px 0px;
+}
+
+
+
+
+
+.btn-volver{
+  background-color: #00000000;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+}
+
+.btn-volver:hover{
+  border-color: #00000000;
+}
+
+
+.btn-profile{
+  background-color: #00000000;
+  position: absolute;
+  top: 5vh;
+  right: 0;
+}
+
+.image-profile{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.btn-profile p {
+    margin: 0;
+}
+
+
+button.btn-regular.btn.btn-primary {
+    display: block;
+    margin: 0 auto;
 }
