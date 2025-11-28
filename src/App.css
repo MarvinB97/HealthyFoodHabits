@@ -103,6 +103,28 @@ body {
   left: 0;
 }
 
+.subContainerTransparentEstadisticas{
+  background-color: #f0f0f000;
+  margin: 0 9vw;
+  width: 80vw;
+  padding: 1vw;
+  position: absolute;
+  top: 15vh;
+  left: 0;
+}
+
+.subContainerEstadisticas {
+    background-color: #F0F0F0;
+    margin: 0 9vw;
+    width: 80vw;
+    padding: 1vw;
+    border: 1px solid #000;
+    border-radius: 12px;
+    position: absolute;
+    top: 32vh;
+    left: 0;
+}
+
 .subContainerRegistroAlimentos{
   background-color: #FFF5F5;
   margin: 0 9vw;
@@ -244,4 +266,20 @@ button.btn-right {
 button.btn-regular.btn.btn-primary {
     display: block;
     margin: 0 auto;
+}
+
+.container-with-scroll-y{
+  background-color: #e3e3e3;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 30vh;
+}
+
+.image-logro{
+  width: 100px;
+  height: auto;
+  margin-top: 0.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }

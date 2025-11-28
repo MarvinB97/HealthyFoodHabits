@@ -12,15 +12,24 @@ const GrupoFamiliar = ()=>{
             </Button>
             <div className="subContainerTransparent">
                 <p className="text-bold">Grupo familiar</p>
-                <Button className="btn-white-group">
-                    <i class="fas fa-plus"></i>
+
+                
+                <Button className="btn-regular" onClick={() => navigate("/grupo-familiar-lista")}>
+                    <i className="fas fa-user-cog"></i>
+                    <p>Administrar usuarios</p> 
+                </Button>
+                
+                <hr/>
+
+                <Button className="btn-white-group" onClick={() => navigate("/grupo-familiar-create")}>
+                    <i className="fas fa-plus"></i>
                     <p>Crear un grupo familiar</p> 
                 </Button>
                 
                 <hr/>
                 
-                <Button className="btn-white-group">
-                    <i class="fas fa-link"></i>
+                <Button className="btn-white-group" onClick={() => navigate("/grupo-familiar-join")}>
+                    <i className="fas fa-link"></i>
                     <p>Unirse a grupo familiar </p>
                 </Button>
             </div>

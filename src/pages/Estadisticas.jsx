@@ -2,6 +2,7 @@ import { Button, Image } from "react-bootstrap";
 import AppBackground from "../components/AppBackground";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import RegistroAgregado from "../components/RegistroAgregado";
 
 const Estadisticas = ()=>{
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Estadisticas = ()=>{
             <Button className="btn-volver" onClick={() => navigate("/home")}>
                 {"<"} Volver
             </Button>
-            <div className="subContainerTransparent">
+            <div className="subContainerTransparentEstadisticas">
                 <h4 className="text-bold">Estadísticas</h4>
                 <Button className="btn-left" onClick={()=>setTime(true)}>
                     Diario
@@ -21,14 +22,14 @@ const Estadisticas = ()=>{
                 <Button className="btn-right" onClick={()=>setTime(false)}>
                     Semanal
                 </Button>
+            </div>
             {time 
             ? 
-                <p>Resultados diarios.</p>
+                <RegistroAgregado isGrafico={time}/>
             
             :
-                <p>Resultados semanales.</p>
+                <RegistroAgregado isGrafico={time}/>
             }
-            </div>
         </>
     );
 }
