@@ -37,7 +37,14 @@ const RegistroAlimentos = () => {
                 }
             );
 
-            setIsRegister(true); // activa pantalla de “Registro agregado”
+            navigate("/resultado-registro", {state: { 
+                food: {
+                    foodName: nombre, 
+                    foodDescription: descripcion
+                }
+            }})
+
+            //setIsRegister(true); // activa pantalla de “Registro agregado”
         } catch (err) {
             console.error("Error guardando registro:", err);
         }
