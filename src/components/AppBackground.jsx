@@ -1,6 +1,7 @@
 import { Button, Image } from "react-bootstrap";
-import {hatcheft} from "../assets/icons/hat_chef.png";
-import {fruits} from "../assets/icons/fruits.png";
+import hatcheft from "../assets/icons/hat_chef.png";
+import fruits from "../assets/icons/fruits.png";
+
 
 const AppBackground = ({show})=>{
     return(
