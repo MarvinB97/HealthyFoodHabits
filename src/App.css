@@ -245,3 +245,19 @@ button.btn-regular.btn.btn-primary {
     display: block;
     margin: 0 auto;
 }
+
+.container-with-scroll-y{
+  background-color: #e3e3e3;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 30vh;
+}
+
+.image-logro{
+  width: 100px;
+  height: auto;
+  margin-top: 0.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}

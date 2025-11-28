@@ -9,6 +9,7 @@ import { auth } from "../firebase";
 
 
 import defaultPhoto from "../assets/icons/logo-profile.png";
+import logro from "../assets/icons/logro.png";
 
 
 const Perfil = ()=>{
@@ -50,6 +51,9 @@ const Perfil = ()=>{
                 
                 <p>Mis insignias</p>
                 <hr/>
+
+                <Image className="image-logro" src={logro}/>
+
                 {/**se deben colocar las imagenes de cada una */}
                 <Button className="btn-regular" onClick={logout}>
                     Cerrar Sesión
