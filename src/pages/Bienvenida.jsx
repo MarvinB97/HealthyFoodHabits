@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 
+import hatcheft from "../assets/icons/hat-chef.png";
+
 const Bienvenida = ()=>{
     const navigate = useNavigate();
 
@@ -24,7 +26,7 @@ const Bienvenida = ()=>{
             <AppBackground show={false}/>
             <div className="subContainerBienvenida">
                 <p>Bienvenido a</p>
-                <Image className="image-icon" src=".\src\assets\icons\hat_chef.png"/>
+                <Image className="image-icon" src={hatcheft}/>
                 <h2 className="AppTitle">Healthy Food Habits</h2>
                 <p>Pequeños pasos hacia una alimentación mas consciente.</p>
                 <hr/>
