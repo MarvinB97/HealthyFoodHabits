@@ -17,10 +17,10 @@ const Estadisticas = ()=>{
             <div className="subContainerTransparentEstadisticas">
                 <h4 className="text-bold">Estadísticas</h4>
                 <Button className="btn-left" onClick={()=>setTime(true)}>
-                    Diario
+                    Gráfico
                 </Button>
                 <Button className="btn-right" onClick={()=>setTime(false)}>
-                    Semanal
+                    Lista
                 </Button>
             </div>
             {time 
