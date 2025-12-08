@@ -2,6 +2,7 @@ import { Button, Image } from "react-bootstrap";
 import hatcheft from "../assets/icons/hat-chef.png";
 import fruits from "../assets/icons/fruits.png";
 
+
 const AppBackground = ({show})=>{
     return(
         <div className="principalContainer">
