@@ -5,9 +5,9 @@ import {
   HarmCategory,
 } from "@google/generative-ai";
 import AppBackground from "../components/AppBackground";
-import { Button } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { Button, Image } from "react-bootstrap";
 import { useQuery } from "@tanstack/react-query";
+import logro from "../assets/icons/logro.png";
 
 const ResultadoRegistro = () => {
   const safetySettings = [
@@ -46,7 +46,7 @@ const ResultadoRegistro = () => {
   const instruction = `
    Genera **solo** un objeto JSON válido con esta estructura exacta:
 
-    {"description":"<descripción>", "consejo":"<consejo>"}
+    {"description":"<descripción>", "consejo":"<consejo>", "tiene_tomate":<true-o-false>}
 
     Reglas estrictas:
     - **No** uses bloques de código.
@@ -96,9 +96,27 @@ const ResultadoRegistro = () => {
         <br></br>
         <p style={{ fontWeight: "bold", color: "green" }}>+3 puntos</p>
         <br></br>
+        {responseJson.tiene_tomate && (
+          <div>
+            <Image className="image-logro" src={logro} />
+            <p>Amante del tomate</p>
+          </div>
+        )}
+        <br></br>
         <p>{responseJson.consejo}</p>
 
-        <Button className="btn-regular" onClick={() => navigate("/home")}>
+        <Button
+          className="btn-regular"
+          onClick={() =>
+            navigate("/home", {
+              state: {
+                badges: responseJson.tiene_tomate
+                  ? [{ badge: "tomato_badge", name: "Amante del tomate" }]
+                  : [],
+              },
+            })
+          }
+        >
           Entendido
         </Button>
       </div>
