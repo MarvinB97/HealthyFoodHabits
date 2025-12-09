@@ -94,6 +94,30 @@ body {
   left: 0;  
 }
 
+@media (prefers-color-scheme: light) {
+  .subContainerBienvenida {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000;
+  }
+  .subContainerRegistroAlimentos {
+    background-color: #ffffff!important;
+    color: #000000!important;
+    border-color: #000!important;
+  }
+  .subContainerRegistroAlimentos h4 {
+    color: #000000!important;
+  }
+  .subContainerRegistroAlimentos input {
+    background-color: rgb(235, 235, 235)!important;
+    color: #000000!important;
+    border-color: #000!important;
+  }
+  .subContainerRegistroAlimentos label {
+    color: #000000!important;
+  }
+}
+
 .subContainerTransparent{
   background-color: #f0f0f000;
   margin: 0 9vw;
