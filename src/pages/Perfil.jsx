@@ -52,7 +52,7 @@ const Perfil = () => {
         <p>Mis insignias</p>
         <hr />
 
-        {badges.length > 0 && <p>No tienes insignias</p>}
+        
 
         {badges.map((doc) => (
           <div>
